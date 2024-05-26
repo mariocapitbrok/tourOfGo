@@ -2,14 +2,9 @@ package main
 
 import (
 	"fmt"
-	"math"
-	"time"
+	"math/rand"
 )
 
 func main() {
-	fmt.Println("Welcome to the playground!")
-
-	fmt.Println("The time is", time.Now())
-
-	fmt.Println("Square toot of 18 is", math.Sqrt(16))
+	fmt.Println("My favorite number is", rand.Intn(10))
 }
