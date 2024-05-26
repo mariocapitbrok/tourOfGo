@@ -1,23 +1,24 @@
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import "fmt"
+
+func add(x int, y int) int {
+	return x + y
+}
 
 func main() {
-	fmt.Println(math.Pi)
+	fmt.Println(add(42, 13))
 }
 
 /*
-Exported names
-In Go, a name is exported if it begins with a capital letter. For example, Pizza is an exported name, as is Pi, which is exported from the math package.
 
-pizza and pi do not start with a capital letter, so they are not exported.
+Functions
+A function can take zero or more arguments.
 
-When importing a package, you can refer only to its exported names. Any "unexported" names are not accessible from outside the package.
+In this example, add takes two parameters of type int.
 
-Run the code. Notice the error message.
+Notice that the type comes after the variable name.
 
-To fix the error, rename math.pi to math.Pi and try it again.
+(For more about why types look the way they do, see the article on Go's declaration syntax.)
+
 */
