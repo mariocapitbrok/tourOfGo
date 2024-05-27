@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	sum := 1
-	for ; sum < 1000; {
+	for sum < 1000 {
 		sum += sum
 	}
 	fmt.Println(sum)
@@ -12,7 +12,8 @@ func main() {
 
 
 
+
 /*
-For continued
-The init and post statements are optional.
+For is Go's "while"
+At that point you can drop the semicolons: C's while is spelled for in Go.
 */
