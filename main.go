@@ -1,16 +1,23 @@
 package main
 
-func main() {
-	for {
+import (
+	"fmt"
+	"math"
+)
+
+func sqrt(x float64) string {
+	if x < 0 {
+		return sqrt(-x) + "i"
 	}
+	return fmt.Sprint(math.Sqrt(x))
+}
+
+func main() {
+	fmt.Println(sqrt(2), sqrt(-4))
 }
 
 
-
-
-
 /*
-
-Forever
-If you omit the loop condition it loops forever, so an infinite loop is compactly expressed.
+If
+Go's if statements are like its for loops; the expression need not be surrounded by parentheses ( ) but the braces { } are required.
 */
