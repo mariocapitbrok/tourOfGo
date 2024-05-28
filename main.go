@@ -5,15 +5,7 @@ import (
 	"math"
 )
 
-func main() {
-	for i:= 1; i <= 5; i++ {
-		x:= float64(i)
-		fmt.Printf("Calculating square root of %v\n", x)
-		fmt.Printf("Result: %v\n", Sqrt(x))
-		fmt.Printf("math.Sqrt: %v\n\n", math.Sqrt(x))
-	}
-}
-
+// Sqrt calculates the square root of x using Newton's method
 func Sqrt(x float64) float64 {
 	z:= 1.0 // initial guess
 
@@ -24,6 +16,18 @@ func Sqrt(x float64) float64 {
 
 	return z
 }
+
+func main() {
+	// Test the function with various values of x
+	for i:= 1; i <= 5; i++ {
+		x:= float64(i)
+		fmt.Printf("Calculating square root of %v\n", x)
+		fmt.Printf("Result: %v\n", Sqrt(x))
+		fmt.Printf("math.Sqrt: %v\n\n", math.Sqrt(x))
+	}
+}
+
+
 
 
 /*
