@@ -10,7 +10,7 @@ func Sqrt(x float64) float64 {
 	z:= 1.0 // initial guess
 	prevZ := 0.0
 
-	for math.Abs(z-prevZ) > 1e-10 {
+	for math.Abs(z-prevZ) > 1e-10 { // continue until the change is very small
 		prevZ = z
 		z -= (z*z - x) / (2 * z)
 		fmt.Printf("z = %v\n", z)
