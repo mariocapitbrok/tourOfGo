@@ -8,7 +8,10 @@ import (
 func pow(x, n, lim float64) float64 {
 	if v := math.Pow(x, n); v < lim {
 		return v
+	} else {
+		fmt.Printf("%g >= %g\n", v, lim)
 	}
+	// can't use v here, though
 	return lim
 }
 
@@ -20,12 +23,9 @@ func main() {
 }
 
 
-
 /*
-If with a short statement
-Like for, the if statement can start with a short statement to execute before the condition.
+If and else
+Variables declared inside an if short statement are also available inside any of the else blocks.
 
-Variables declared by the statement are only in scope until the end of the if.
-
-(Try using v in the last return statement.)
+(Both calls to pow return their results before the call to fmt.Println in main begins.)
 */
